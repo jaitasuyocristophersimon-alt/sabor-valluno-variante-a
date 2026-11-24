@@ -22,11 +22,11 @@ Este proyecto aplica la Variante A:
 - `modelo/pagos.py`: MetodoPago, Efectivo, QR y Tarjeta.
 - `restaurante.py`: funciones para mostrar detalles, menús y reportes.
 - `main.py`: menú de consola.
-- `pruebas.py`: 16 casos de prueba con assert.
+- `pruebas.py`: 16 casos de prueba con assert; ejecutados el 24/11/2026, los 16 terminaron correctamente.
 - `docs/diagrama_v1.png`: foto del diagrama firmado y aprobado.
 - `docs/diagrama_v2.png`: reconstrucción legible de clases, relaciones y reglas de Variante A; indica los cambios respecto a v1.
 - `docs/bitacora_ia.md`: registro de asistencia de IA.
-- `docs/registro_ia_REEMPLAZAR_POR_APELLIDO.md`: plantilla del registro personal que debes renombrar con tu apellido y firmar.
+- `docs/registro_ia_Suyo_Jaita.md`: registro personal de Cristopher Jesus Suyo Jaita; falta completar la semana y firmarlo.
 - `docs/acta_consultas.md`: preguntas de reglas para el docente.
 - `docs/guia_para_exponer.md`: explicación sencilla de los módulos y una demostración paso a paso.
 
@@ -46,7 +46,7 @@ Para ejecutar los casos de prueba cuando estés listo:
 python pruebas.py
 ```
 
-El código se generó con ayuda de IA. Revísalo y asegúrate de poder explicar cada clase antes de entregarlo. Hay 16 casos de prueba en `pruebas.py`; no se han ejecutado.
+El código se generó con ayuda de IA. Revísalo y asegúrate de poder explicar cada clase antes de entregarlo. Última comprobación: `python pruebas.py` completó los 16 casos el 24/11/2026.
 
 ## Pendiente de consulta
 
@@ -54,10 +54,10 @@ El documento pide consultar al docente cuándo se considera retraso en delivery 
 
 ## Antes de entregar
 
-- Completa y firma tu registro personal de IA; el archivo contiene un nombre de reemplazo.
+- Completa la semana y firma tu registro personal de IA cuando ya hayas revisado el código.
 - Consulta al docente la regla de retraso y registra la respuesta en el acta.
 - Revisa el diagrama v2 con el ingeniero, especialmente las relaciones y sus multiplicidades.
-- Ejecuta `python pruebas.py` y confirma que los 16 casos pasan antes de subir.
+- Si haces más cambios al código, vuelve a ejecutar `python pruebas.py` y confirma que los 16 casos pasan.
 - Explica con tus palabras las clases y reglas del programa para la defensa individual.
 
 ## Git y entrega
