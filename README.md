@@ -50,7 +50,16 @@ El código se generó con ayuda de IA. Revísalo y asegúrate de poder explicar 
 
 ## Pendiente de consulta
 
-El documento pide consultar al docente cuándo se considera retraso en delivery y cuál es la compensación. Esa regla no se inventó; está anotada como pendiente en `docs/acta_consultas.md`. El método para registrar una compensación existe, pero hay que completar la regla tras recibir la respuesta.
+## Revisión frente al documento del proyecto
+
+Al comparar el sistema con el documento original, encontré estos puntos para cerrar o confirmar:
+
+- La regla oficial indica que hay retraso cuando el delivery tarda más de 60 minutos y que se devuelve el costo del envío. El programa todavía no aplica esa regla automáticamente al entregar el pedido.
+- Guardar y cargar datos en JSON es opcional; por ahora el sistema trabaja en memoria y los datos se borran al salir.
+- El documento menciona una clase gestora `Restaurante`. En este proyecto, `restaurante.py` contiene funciones de apoyo. El ingeniero indicó que Restaurante no debía agregarse como clase relacionada en el diagrama, así que no se cambia el diagrama sin consultarle esa diferencia.
+- El documento espera al menos cuatro commits en las fases 2 y 3. El historial actual no demuestra esa distribución semanal; no se deben crear commits con fechas falsas. Hay que consultar al docente cómo registrar el trabajo ya realizado.
+
+El acta conserva la pregunta sobre retraso como pendiente de confirmación directa con el docente; no se presenta una consulta como realizada si no ocurrió.
 
 ## Antes de entregar
 
