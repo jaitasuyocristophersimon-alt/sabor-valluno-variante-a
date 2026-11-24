@@ -294,6 +294,13 @@ class Delivery(Pedido):
         self._compensacion = monto
         return self._compensacion
 
+    def _al_cambiar_estado(self, nuevo_estado):
+        if nuevo_estado != "ENTREGADO":
+            return
+        minutos_transcurridos = (datetime.now() - self.fecha_registro).total_seconds() / 60
+        if minutos_transcurridos > 60:
+            self._compensacion = self.calcular_envio()
+
     def entregar_pedido(self):
         self.cambiar_estado("ENTREGADO")
 

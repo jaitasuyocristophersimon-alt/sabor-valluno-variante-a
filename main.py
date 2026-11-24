@@ -197,7 +197,10 @@ def cambiar_estado():
         raise ValueError("Este pedido ya está cerrado.")
     print("Estado actualizado: " + pedido.estado)
     if pedido.tipo_pedido == "Delivery" and pedido.estado == "ENTREGADO":
-        print("La compensación por retraso queda pendiente de la regla que confirme el ingeniero.")
+        if pedido.compensacion > 0:
+            print("El pedido superó 60 minutos. Se devuelve el envío: Bs " + format(pedido.compensacion, ".2f"))
+        else:
+            print("No corresponde compensación por retraso.")
 
 
 def cambiar_metodo_pago():

@@ -11,6 +11,7 @@ Completa la semana. Firma solo después de revisar el código y cuando puedas ex
 | 3 | 23/11/2026 | ChatGPT | Orientación y generación asistida | Pedí una primera versión del código según mi diagrama y Variante A. | La organización por módulos y las reglas. | Comparé la propuesta con mis fotos y pedí ajustes; todavía estudio el código. | `modelo/`, `main.py`, `restaurante.py` | No todavía |
 | 4 | 23–24/11/2026 | ChatGPT | Uso y explicación | Pedí ayuda al ejecutar el menú y reconocer los archivos de VS Code. | Una guía paso a paso. | Ejecuté el programa, compartí lo que apareció y pedí aclarar el flujo del combo y `.pyc`. | `main.py`, `restaurante.py`, guía | Parcial |
 | 5 | 24/11/2026 | ChatGPT | Verificación | Pedí ejecutar los 16 casos de `pruebas.py` antes de la exposición. | El resultado de las pruebas. | Los 16 casos terminaron correctamente; debo revisar qué valida cada uno. | `pruebas.py` | Parcial |
+| 6 | 24/11/2026 | ChatGPT | Revisión y pruebas | Comparé el proyecto con el documento y pedí completar los casos. | La regla: retraso después de 60 minutos y devolución del envío. | Se añadió el cálculo al entregar delivery tardío y dos pruebas; debo estudiar cómo funciona. | modelo/pedidos.py, main.py, pruebas.py | Parcial |
 
 Declaro que este registro resume mis usos de IA en el proyecto. Antes de firmarlo, revisaré el código y confirmaré que puedo explicarlo.
 

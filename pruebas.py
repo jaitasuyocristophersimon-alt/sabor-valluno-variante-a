@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from decimal import Decimal
 
 from modelo.clientes import Cliente
@@ -137,6 +138,27 @@ def probar_mesa_no_se_repite_en_pedidos_abiertos():
     primero.cancelar_pedido()
 
 
+def probar_delivery_tarde_devuelve_costo_envio():
+    pedido = Delivery(Cliente("Tania", "71234567"), "Quillacollo")
+    pedido.agregar_producto(Plato("Silpancho", 50), 1)
+    pedido._fecha_registro = datetime.now() - timedelta(minutes=61)
+    pedido.cambiar_estado("EN_PREPARACION")
+    pedido.cambiar_estado("LISTO")
+    pedido.cambiar_estado("ENTREGADO")
+    assert pedido.compensacion == Decimal("15.00")
+    assert pedido.calcular_cargos() == Decimal("0.00")
+
+
+def probar_delivery_a_tiempo_no_devuelve_envio():
+    pedido = Delivery(Cliente("Mario", "61234567"), "Vinto")
+    pedido.agregar_producto(Plato("Silpancho", 50), 1)
+    pedido.cambiar_estado("EN_PREPARACION")
+    pedido.cambiar_estado("LISTO")
+    pedido.cambiar_estado("ENTREGADO")
+    assert pedido.compensacion == Decimal("0.00")
+    assert pedido.calcular_cargos() == Decimal("20.00")
+
+
 def ejecutar_pruebas():
     pruebas = [
         probar_validacion_precio,
@@ -154,7 +176,9 @@ def ejecutar_pruebas():
         probar_codigo_qr_de_diez_digitos,
         probar_comision_tarjeta,
         probar_tarjeta_no_se_acepta_en_delivery,
-        probar_mesa_no_se_repite_en_pedidos_abiertos
+        probar_mesa_no_se_repite_en_pedidos_abiertos,
+        probar_delivery_tarde_devuelve_costo_envio,
+        probar_delivery_a_tiempo_no_devuelve_envio
     ]
     for prueba in pruebas:
         prueba()

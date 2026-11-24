@@ -22,7 +22,7 @@ Este proyecto aplica la Variante A:
 - `modelo/pagos.py`: MetodoPago, Efectivo, QR y Tarjeta.
 - `restaurante.py`: funciones para mostrar detalles, menús y reportes.
 - `main.py`: menú de consola.
-- `pruebas.py`: 16 casos de prueba con assert; ejecutados el 24/11/2026, los 16 terminaron correctamente.
+- `pruebas.py`: 18 casos de prueba con assert. Revisa reglas de Variante A, pagos, pedidos y retraso en delivery.
 - `docs/diagrama_v1.png`: foto del diagrama firmado y aprobado.
 - `docs/diagrama_v2.png`: reconstrucción legible de clases, relaciones y reglas de Variante A; indica los cambios respecto a v1.
 - `docs/bitacora_ia.md`: registro de asistencia de IA.
@@ -46,20 +46,18 @@ Para ejecutar los casos de prueba cuando estés listo:
 python pruebas.py
 ```
 
-El código se generó con ayuda de IA. Revísalo y asegúrate de poder explicar cada clase antes de entregarlo. Última comprobación: `python pruebas.py` completó los 16 casos el 24/11/2026.
-
-## Pendiente de consulta
+El código se generó con ayuda de IA. Revísalo y asegúrate de poder explicar cada clase antes de entregarlo. Última comprobación: `python pruebas.py` completó los 18 casos el 24/11/2026.
 
 ## Revisión frente al documento del proyecto
 
-Al comparar el sistema con el documento original, encontré estos puntos para cerrar o confirmar:
+Al comparar el sistema con el documento original, estos son los resultados:
 
-- La regla oficial indica que hay retraso cuando el delivery tarda más de 60 minutos y que se devuelve el costo del envío. El programa todavía no aplica esa regla automáticamente al entregar el pedido.
+- **Retraso en delivery:** si se entrega después de 60 minutos, el pedido devuelve el costo del envío. Se aplica automáticamente al pasar a ENTREGADO y tiene dos pruebas.
 - Guardar y cargar datos en JSON es opcional; por ahora el sistema trabaja en memoria y los datos se borran al salir.
 - El documento menciona una clase gestora `Restaurante`. En este proyecto, `restaurante.py` contiene funciones de apoyo. El ingeniero indicó que Restaurante no debía agregarse como clase relacionada en el diagrama, así que no se cambia el diagrama sin consultarle esa diferencia.
 - El documento espera al menos cuatro commits en las fases 2 y 3. El historial actual no demuestra esa distribución semanal; no se deben crear commits con fechas falsas. Hay que consultar al docente cómo registrar el trabajo ya realizado.
 
-El acta conserva la pregunta sobre retraso como pendiente de confirmación directa con el docente; no se presenta una consulta como realizada si no ocurrió.
+El acta conserva la pregunta sobre retraso pendiente de confirmación directa; el código usa la regla que figura en el documento original.
 
 ## Antes de entregar
 
@@ -73,4 +71,4 @@ El acta conserva la pregunta sobre retraso como pendiente de confirmación direc
 
 Repositorio público: https://github.com/jaitasuyocristophersimon-alt/sabor-valluno-variante-a
 
-Los commits son puntos de guardado con un mensaje que resume un cambio. El primer commit registra el estado actual del proyecto; no reconstruye ni inventa el historial de semanas anteriores. Desde ahora, guarda cambios reales en commits pequeños mientras estudias y corriges el código. Consulta al ingeniero cómo proceder con el requisito de commits de semanas pasadas.
+Los commits son puntos de guardado con un mensaje que resume un cambio. El historial registra trabajo hecho desde ahora; no se reconstruyen ni inventan commits de semanas anteriores. Consulta al ingeniero cómo proceder con la distribución semanal que pide el documento.
